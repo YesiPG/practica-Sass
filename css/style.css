@@ -1,0 +1,145 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 2px 4px 10px #000000;
+}
+.nav__logo {
+  font-size: 2.5rem;
+  color: #339e33;
+}
+.nav__link {
+  margin: 1rem;
+  font-size: 1.6rem;
+  color: #c41e1e;
+}
+.nav__link:hover {
+  color: #339e33;
+}
+.nav__link:nth-child(5) {
+  background-color: #c41e1e;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.6rem;
+  color: #ffffff;
+}
+.nav__link:nth-child(5):hover {
+  background-color: #339e33;
+}
+.nav__link:nth-child(6) {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .nav {
+    padding: 2rem;
+  }
+  .nav__link {
+    opacity: 0;
+    pointer-events: unset;
+  }
+  .nav__link:nth-child(6) {
+    opacity: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .nav {
+    padding: 2rem;
+  }
+  .nav__link:nth-child(6) {
+    opacity: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .nav {
+    padding: 2rem;
+  }
+  .nav__link:nth-child(6) {
+    opacity: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+@media (max-width: 320px) {
+  .nav {
+    padding: 1rem;
+  }
+  .nav__link:nth-child(6) {
+    opacity: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  padding: 2rem 4rem;
+  padding-top: 10rem;
+}
+.hero__text {
+  padding: 1rem;
+}
+.hero__text--subt {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero__text--title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+.hero__text--parrafo {
+  font-size: 1.6rem;
+  margin: 0.5rem;
+}
+.hero__text--precio {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.hero__text--btn {
+  margin-top: 2rem;
+  font-size: 2rem;
+  background-color: #339e33;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.7rem;
+  color: #ffffff;
+}
+.hero__text--btn:hover {
+  background-color: #c41e1e;
+}
+.hero__imagen {
+  max-width: 100%;
+  width: 40rem;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,105 @@
+@use 'mixinsfunc';
+@use 'variables';
+@use 'reset';
+
+
+.nav{
+
+    @include mixinsfunc.crear-flexbox(space-between,center);
+    padding: 2rem;
+    box-shadow: 2px 4px 10px variables.$color-four;
+
+    &__logo{
+        font-size: 2.5rem;
+        color: variables.$color-primary;
+    }
+
+    &__link{
+        margin: 1rem;
+        font-size: 1.6rem;
+        color: variables.$color-second;
+
+        &:hover{
+            color: variables.$color-primary;
+        }
+
+        &:nth-child(5){
+            background-color: variables.$color-second;
+            padding: .5rem 1.5rem;
+            border-radius: .6rem;
+            color: variables.$color-third;
+
+            &:hover{
+                background-color: variables.$color-primary;
+            }
+        }
+
+        &:nth-child(6){
+            background-color: variables.$color-third;
+            border-radius: .5rem;
+            font-size: 2rem;
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+
+            
+        }
+    }
+
+    @media (max-width: 768px){
+        
+        padding: 2rem;
+
+        &__link{
+            opacity: 0;
+            pointer-events: unset;
+
+            &:nth-child(6){
+                opacity: 1;
+                top: 2rem;
+                right: 2rem;
+            }
+        }
+    }
+    @media (max-width: 576px){
+        
+        padding: 2rem;
+
+        &__link{
+
+            &:nth-child(6){
+                opacity: 1;
+                top: 2rem;
+                right: 2rem;
+            }
+        }
+    }
+    @media (max-width: 480px){
+        
+        padding: 2rem;
+
+        &__link{
+
+            &:nth-child(6){
+                opacity: 1;
+                top: 2rem;
+                right: 2rem;
+            }
+        }
+    }
+
+    @media (max-width: 320px){
+        
+        padding: 1rem;
+
+        &__link{
+
+            &:nth-child(6){
+                opacity: 1;
+                top: 2rem;
+                right: 2rem;
+            }
+        }
+    }
+    
+}

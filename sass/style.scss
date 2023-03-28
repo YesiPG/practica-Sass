@@ -1,0 +1,57 @@
+@use 'reset';
+@use 'navbar';
+@use 'mixinsfunc';
+@use 'variables';
+
+
+.hero{
+    @include mixinsfunc.crear-grid(1fr,1fr 1fr);
+    height: 100vh;
+    padding: 2rem 4rem;
+    padding-top: 10rem;
+
+    &__text{
+        padding: 1rem;
+
+        &--subt{
+            font-weight: 400;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        &--title{
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        &--parrafo{
+            font-size: 1.6rem;
+            margin: .5rem;
+        }
+
+        &--precio{
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        &--btn{
+            margin-top: 2rem;
+            font-size: 2rem;
+            background-color: variables.$color-primary;
+            padding: .5rem 1.5rem;
+            border-radius: .7rem;
+            color: variables.$color-third;
+
+            &:hover{
+                background-color: variables.$color-second;
+            }
+        }
+    }
+
+    &__imagen{
+        max-width: 100%;
+        width: 40rem;
+        object-fit: cover; 
+    }
+}
