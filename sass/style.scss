@@ -5,10 +5,10 @@
 
 
 .hero{
-    @include mixinsfunc.crear-grid(1fr,1fr 1fr);
+    @include mixinsfunc.crear-flexbox(center,center);
+    gap: 2;
     height: 100vh;
-    padding: 2rem 4rem;
-    padding-top: 10rem;
+    background-color: variables.$color-five;
 
     &__text{
         padding: 1rem;
@@ -17,14 +17,17 @@
             font-weight: 400;
             font-size: 2rem;
             margin-bottom: 1rem;
+            color: variables.$color-primary;
         }
 
         &--title{
             font-size: 4rem;
             margin-bottom: 1.5rem;
+            color: variables.$color-second;
         }
         
         &--parrafo{
+            width: 40rem;
             font-size: 1.6rem;
             margin: .5rem;
         }
@@ -33,6 +36,7 @@
             font-size: 1.8rem;
             font-weight: 600;
             margin-bottom: 2rem;
+            color: variables.$color-second;
         }
 
         &--btn{
@@ -53,5 +57,29 @@
         max-width: 100%;
         width: 40rem;
         object-fit: cover; 
+    }
+
+    @media (max-width: 850px){
+        height: auto;
+        flex-wrap: wrap;
+        padding-top: 5rem;
+
+        &__text{
+            margin-bottom: 4rem;
+        }
+    }
+
+    @media (max-width: 576px){
+
+        &__text{
+            
+            &--parrafo{
+                font-size: 1.4rem;
+            }
+
+            &--precio{
+                font-size: 10rem;
+            }
+        }
     }
 }

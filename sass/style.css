@@ -144,7 +144,8 @@ body {
 .hero__imagen {
   max-width: 100%;
   width: 40rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 850px) {
   .hero {
@@ -160,6 +161,7 @@ body {
   .hero__text--parrafo {
     font-size: 1.4rem;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+  .hero__text--precio {
+    font-size: 10rem;
+  }
+}/*# sourceMappingURL=style.css.map */
