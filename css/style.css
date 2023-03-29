@@ -157,8 +157,21 @@ body {
   }
 }
 @media (max-width: 576px) {
+  .hero__text {
+    text-align: center;
+  }
   .hero__text--parrafo {
     font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero__text--parrafo {
+    width: 30rem;
+  }
+}
+@media (max-width: 320px) {
+  .hero__text--parrafo {
+    width: 25rem;
   }
 }
 

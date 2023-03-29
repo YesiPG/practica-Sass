@@ -72,14 +72,31 @@
     @media (max-width: 576px){
 
         &__text{
-            
+            text-align: center;
+
             &--parrafo{
                 font-size: 1.4rem;
             }
+            
+        }
+    }
 
-            &--precio{
-                font-size: 10rem;
+    @media (max-width: 480px){
+
+        &__text{
+            &--parrafo{
+                width: 30rem;
             }
+            
+        }
+    }
+    @media (max-width: 320px){
+
+        &__text{
+            &--parrafo{
+                width: 25rem;
+            }
+            
         }
     }
 }
